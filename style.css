@@ -12,6 +12,7 @@
   --muted-ink: #66513b;
   --fern: #3d5131;
   --rust: #8c3e27;
+  --footer-height: 54px;
   --hand: "Caveat", cursive;
   --body: Georgia, "Times New Roman", serif;
 }
@@ -31,9 +32,9 @@ a:hover { color: var(--rust); }
   flex-direction: column;
   min-height: 840px;
   min-height: max(840px, 100svh);
-  background: var(--paper) url("assets/watercolour-paper.webp") center top / 768px auto repeat;
+  background: var(--paper) url("assets/watercolour-paper.webp") center top / cover no-repeat;
 }
-.woodland { position: absolute; z-index: -1; bottom: 0; left: 0; width: 100%; overflow: hidden; pointer-events: none; }
+.woodland { position: absolute; z-index: -1; bottom: var(--footer-height); left: 0; width: 100%; overflow: hidden; pointer-events: none; }
 .woodland img { position: relative; left: 50%; transform: translateX(-50%); display: block; width: 100%; min-width: 520px; height: auto; mask-image: linear-gradient(to bottom, transparent, #000 15%); }
 .site-header { display: flex; justify-content: space-between; align-items: center; gap: 32px; width: min(1240px, calc(100% - 112px)); margin: 0 auto; padding-top: 35px; }
 .signature { position: relative; font: 500 29px/1.2 var(--hand); text-decoration: none; white-space: nowrap; }
@@ -50,8 +51,7 @@ h1 { margin: 0; font: 500 clamp(3.75rem, 6.7vw, 6rem)/1.06 var(--hand); letter-s
 .profile-link svg { transition: transform 200ms ease; }
 .profile-link:hover { border-color: var(--rust); }
 .profile-link:hover svg { transform: translateX(4px); }
-.margin-note { position: absolute; right: max(8%, calc((100% - 1200px) / 2)); top: 380px; margin: 0; color: var(--muted-ink); font: 400 24px/1.2 var(--hand); transform: rotate(-5deg); }
-footer { display: flex; justify-content: space-between; align-items: center; gap: 16px; width: 100%; margin: 0 auto; padding: 17px max(56px, calc((100% - 1240px) / 2)); color: var(--muted-ink); background: #f6dfb6e6; font-size: 12px; line-height: 1.5; }
+footer { display: flex; justify-content: space-between; align-items: center; gap: 16px; width: 100%; min-height: var(--footer-height); margin: 0 auto; padding: 17px max(56px, calc((100% - 1240px) / 2)); color: var(--muted-ink); background: #f6dfb6e6; font-size: 12px; line-height: 1.5; }
 footer a { text-decoration-color: #927c5b; }
 @media (min-width: 1700px) {
   .welcome { margin-top: 90px; }
@@ -67,7 +67,6 @@ footer a { text-decoration-color: #927c5b; }
   .greeting { max-width: 290px; margin: 20px auto 0; font-size: 27px; }
   .intro { margin-top: 23px; font-size: 16px; }
   .profile-link { margin-top: 22px; font-size: 25px; }
-  .margin-note { top: 440px; right: 28px; font-size: 21px; }
   footer { padding: 18px 20px; font-size: 11px; }
 }
 @media (prefers-reduced-motion: reduce) {
