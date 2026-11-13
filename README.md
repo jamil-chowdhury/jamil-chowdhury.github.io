@@ -6,10 +6,9 @@ Website: https://jamil-chowdhury.github.io/
 
 - `index.html`: homepage text, navigation and links.
 - `style.css`: responsive layout, colours and typography.
-- `assets/forest-roots.webp`: original decorative artwork inspired by ectomycorrhizal life in a forest.
-- `assets/watercolour-paper.webp`: a crop of the artwork's heavily textured warm paper, sized as a single continuous background.
+- `paper.js`: static greyish watercolour-paper texture drawn with JavaScript canvas at display density. Redraws on resize; no image download or animation loop. CSS provides a neutral fallback without JavaScript.
 - `assets/caveat-subset.ttf`: self-hosted Caveat font; see `assets/OFL-Caveat.txt` for its license.
 
 GitHub Pages publishes from the root of the `main` branch. The custom `index.html` is the website entry point; editing this README does not change the homepage.
 
-The artwork is decorative, not a labelled scientific diagram. The user's supplied reference was used only for its watercolour-and-ink style, not reproduced on the website.
+Text and links remain normal HTML, separate from the decorative canvas. Reference screenshots were used only for paper character, not their content or illustrations.

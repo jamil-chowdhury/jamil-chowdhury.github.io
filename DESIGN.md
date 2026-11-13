@@ -1,12 +1,12 @@
 ---
-name: Jamil Chowdhury — Watercolour woodland
-description: An illustrated personal welcome page on rough warm watercolour paper.
+name: Jamil Chowdhury — Grey watercolour paper
+description: A personal welcome page on procedurally drawn neutral paper.
 colors:
-  paper: "#f6dfb6"
-  ink: "#3e3023"
-  muted-ink: "#66513b"
-  fern: "#3d5131"
-  rust: "#8c3e27"
+  paper: "#eeefeb"
+  ink: "#343b36"
+  muted-ink: "#57625d"
+  fern: "#485c56"
+  rust: "#3c5061"
 typography:
   display:
     fontFamily: "Caveat, cursive"
@@ -27,29 +27,28 @@ spacing:
 # Design System
 
 ## Overview
-Warm, heavily textured watercolour paper, original forest-root imagery and quiet, readable typography. The user’s reference establishes the handmade ink-and-wash medium only, not its composition. The illustration is decorative and does not present a precise scientific model.
+Greyish off-white watercolour paper with visible cotton tooth and fibres. A static JavaScript canvas draws the texture at display density; text remains separate HTML. The latest user instruction removes woodland imagery and the yellow cast.
 
 ## Colors
-Warm paper carries dark brown text, fern-green links and rust hover accents. Keep opaque paint away from text.
+Neutral paper carries charcoal text, grey-green links and blue-grey hover accents. Low-amplitude pigment washes preserve reading contrast.
 
 ## Typography
 Caveat supplies a soft handwritten heading and navigation voice. Georgia supports readable body paragraphs. Caveat is self-hosted, with its SIL Open Font License included.
 
 ## Layout
-A single illustrated sheet fills the viewport, with the signature and navigation at the top, central welcome text and a root-and-fungus scene below. At 700px and below, condense navigation, retain a legible central scene crop and use smaller typography. The footer remains in document flow.
+A continuous paper surface fills the viewport, with signature and navigation at the top, central welcome text and a quiet footer in document flow. At 700px and below, condense navigation and reduce typography. No empty area is reserved for illustration.
 
 ## Elevation & Depth
-Paper texture and pigment supply depth. There are no dashboard cards, decorative shadows or glass surfaces.
+Procedural paper relief, fibres and subtle pigment variation supply depth. There are no illustrated objects, cards, decorative shadows or glass surfaces.
 
 ## Shapes
-The background artwork supplies organic contours. Fine rules under text links supply clear affordances.
+Fine rules under text links supply clear affordances. Paper grain has small irregular organic contours.
 
 ## Components
-Navigation uses handwritten text. Profile and source links are real anchors with visible keyboard focus. The main profile link moves its arrow slightly on hover, disabled under reduced-motion preferences.
+Navigation uses handwritten text. Profile and source links are real anchors with visible keyboard focus. Arrow movement and transition are disabled under reduced-motion preferences. The canvas is decorative, hidden from assistive technology and pointer events. It renders once, redraws after a debounced resize, and has no animation loop. A neutral CSS paper fallback works without JavaScript.
 
 ## Do's and Don'ts
-- Do use original imagery matching the user’s ink-and-watercolour medium.
-- Do retain pronounced paper tooth and fibre texture.
-- Do keep text selectable and the content layer separate from artwork.
-- Don't copy the reference composition or add personal biographical claims without authorisation.
-- Don't treat the decorative belowground scene as a precise scientific diagram.
+- Do retain visible paper tooth and fibres at display density.
+- Do keep text selectable and separate from the decorative canvas.
+- Don't introduce yellow washes, trees, mushrooms or other scenery.
+- Don't add personal biographical claims without authorisation.
