@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "Caveat";
+  src: url("assets/caveat-subset.ttf") format("truetype");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  color-scheme: light;
+  --paper: #f6dfb6;
+  --ink: #3e3023;
+  --muted-ink: #66513b;
+  --fern: #3d5131;
+  --rust: #8c3e27;
+  --hand: "Caveat", cursive;
+  --body: Georgia, "Times New Roman", serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scrollbar-color: #8b785a var(--paper); }
+body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--body); -webkit-font-smoothing: antialiased; }
+::selection { color: #fff8e9; background: var(--fern); }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: .25em; }
+a:focus-visible { outline: 2px solid var(--fern); outline-offset: 7px; border-radius: 2px; }
+a:hover { color: var(--rust); }
+.skip-link { position: absolute; z-index: 5; top: -100px; left: 20px; padding: 12px 18px; background: var(--paper); }
+.skip-link:focus { top: 12px; }
+.page {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  min-height: 840px;
+  min-height: max(840px, 100svh);
+  background: var(--paper) url("assets/watercolour-paper.webp") center top / 768px auto repeat;
+}
+.woodland { position: absolute; z-index: -1; bottom: 0; left: 0; width: 100%; overflow: hidden; pointer-events: none; }
+.woodland img { position: relative; left: 50%; transform: translateX(-50%); display: block; width: 100%; min-width: 520px; height: auto; mask-image: linear-gradient(to bottom, transparent, #000 15%); }
+.site-header { display: flex; justify-content: space-between; align-items: center; gap: 32px; width: min(1240px, calc(100% - 112px)); margin: 0 auto; padding-top: 35px; }
+.signature { position: relative; font: 500 29px/1.2 var(--hand); text-decoration: none; white-space: nowrap; }
+.signature-line { display: block; width: 67%; margin: 2px auto 0 0; border-bottom: 1px solid #897351; transform: rotate(-2deg); }
+nav { display: flex; align-items: center; gap: 32px; font: 500 23px/1.2 var(--hand); }
+nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 2px; text-decoration: none; }
+nav .current { text-decoration: underline; text-decoration-color: var(--rust); text-underline-offset: 6px; }
+main { flex: 1; position: relative; outline: none; }
+.welcome { position: relative; z-index: 1; width: min(780px, calc(100% - 48px)); margin: 67px auto 345px; text-align: center; }
+h1 { margin: 0; font: 500 clamp(3.75rem, 6.7vw, 6rem)/1.06 var(--hand); letter-spacing: -.025em; }
+.greeting { margin: 18px 0 0; font: 400 clamp(1.6rem, 2.5vw, 2rem)/1.3 var(--hand); color: var(--fern); }
+.intro { margin: 25px auto 0; color: var(--muted-ink); font-size: 17px; line-height: 1.75; }
+.profile-link { display: inline-flex; align-items: center; justify-content: center; gap: 15px; margin-top: 27px; padding: 6px 0; font: 600 25px/1.3 var(--hand); color: var(--fern); text-decoration: none; border-bottom: 1px solid var(--fern); transition: color 180ms ease, border-color 180ms ease; }
+.profile-link svg { transition: transform 200ms ease; }
+.profile-link:hover { border-color: var(--rust); }
+.profile-link:hover svg { transform: translateX(4px); }
+.margin-note { position: absolute; right: max(8%, calc((100% - 1200px) / 2)); top: 380px; margin: 0; color: var(--muted-ink); font: 400 24px/1.2 var(--hand); transform: rotate(-5deg); }
+footer { display: flex; justify-content: space-between; align-items: center; gap: 16px; width: 100%; margin: 0 auto; padding: 17px max(56px, calc((100% - 1240px) / 2)); color: var(--muted-ink); background: #f6dfb6e6; font-size: 12px; line-height: 1.5; }
+footer a { text-decoration-color: #927c5b; }
+@media (min-width: 1700px) {
+  .welcome { margin-top: 90px; }
+}
+@media (max-width: 700px) {
+  .page { min-height: max(820px, 100svh); }
+  .site-header { width: calc(100% - 40px); padding-top: 24px; gap: 20px; }
+  .signature { font-size: 23px; }
+  nav { font-size: 22px; gap: 17px; }
+  nav .current { display: none; }
+  .welcome { margin-top: 76px; margin-bottom: 325px; }
+  h1 { max-width: 350px; margin-inline: auto; font-size: clamp(3.3rem, 12.8vw, 4.8rem); line-height: 1.06; }
+  .greeting { max-width: 290px; margin: 20px auto 0; font-size: 27px; }
+  .intro { margin-top: 23px; font-size: 16px; }
+  .profile-link { margin-top: 22px; font-size: 25px; }
+  .margin-note { top: 440px; right: 28px; font-size: 21px; }
+  footer { padding: 18px 20px; font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}

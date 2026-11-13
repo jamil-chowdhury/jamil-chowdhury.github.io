@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-13T11:45:00Z",
+  "title": "Jamil Chowdhury — Watercolour woodland",
+  "extensions": {
+    "breakpoints": [{"name": "mobile", "value": "700px"}],
+    "motion": [{"name": "profile-arrow", "value": "transform 200ms ease", "purpose": "A subtle rightward arrow movement on hover; disabled under reduced motion."}]
+  },
+  "narrative": {
+    "northStar": "A warm woodland sketchbook",
+    "overview": "Original ink-and-watercolour forest-root imagery on heavily textured warm paper.",
+    "dos": ["Use original imagery and keep text readable."],
+    "donts": ["Do not copy the supplied reference composition."]
+  }
+}
