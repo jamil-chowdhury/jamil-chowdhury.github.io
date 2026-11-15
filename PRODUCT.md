@@ -6,16 +6,16 @@
 web
 
 ## Stack
-GitHub Pages with static HTML/CSS and JavaScript canvas animation and paper texture.
+GitHub Pages; static HTML, CSS and procedural Canvas 2D art in index.html.
 
 ## Product Purpose
-Personal website at https://jamil-chowdhury.github.io with a scientific animation above a grey area reserved for future science blogs and animations.
+A personal website with the supplied sustainable farming panorama above a grey felt area for future science blogs and animations.
 
 ## Capabilities and Constraints
-Publish to jamil-chowdhury/jamil-chowdhury.github.io. Current page copy is the name Jamil Chowdhury only, in addition to text inside the supplied animation and accessible control labels. Do not invent blog posts, biography, qualifications or employment claims. Responsive layout and keyboard-accessible playback.
+Publish to jamil-chowdhury/jamil-chowdhury.github.io. Current added page text is only Jamil Chowdhury. Retain scientific labels within the supplied artwork and accessible playback labels. Do not invent posts, biography or employment claims.
 
 ## Brand Commitments
-The user supplied clubroot.html and requested its animation at the top of the landing page. Preserve the supplied artwork and captions. Keep neutral grey watercolour paper below, ready for future posts, and show the name Jamil Chowdhury there now. The user requested publication to the existing GitHub Pages site.
+The user's latest correction explicitly selects the farming landing page and attached farm reference, rather than the clubroot animation. Use the latest supplied landing page(1).html. Preserve its 3:1 felt-and-ink farm scene and original generated grey wool/felt background. Show the name below the banner. Keep the future posts area empty.
 
 ## Evidence on Hand
-Supplied clubroot.html: self-contained 104-second hand-drawn clubroot life cycle animation, embedded Patrick Hand font, and procedural drawing. Existing paper.js supplies the grey watercolour texture.
+Latest supplied landing page(1).html and screenshot of the farm panorama: gardener and child, turbines, solar shed, compost, rain barrel, apple tree, hive, hens, sunflowers, roots and fungal nutrient exchange. Desktop and mobile browser checks show the corrected farming scene, name below, and working pause/play control.

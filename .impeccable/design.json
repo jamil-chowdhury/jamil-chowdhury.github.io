@@ -1,80 +1,23 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-11-15T00:00:00Z",
-  "title": "Design System: Jamil Chowdhury - Hand-drawn science journal",
+  "title": "Design System: Jamil Chowdhury - Felt farm",
   "extensions": {
-    "colorMeta": {
-      "paper": { "role": "neutral", "displayName": "Grey watercolour paper" },
-      "ink": { "role": "neutral", "displayName": "Charcoal ink" },
-      "animation-paper": { "role": "neutral", "displayName": "Warm animation paper" },
-      "animation-ink": { "role": "primary", "displayName": "Scientific blue ink" },
-      "playback-border": { "role": "neutral", "displayName": "Quiet control border" },
-      "playback-hover": { "role": "neutral", "displayName": "Control hover wash" }
-    },
-    "typographyMeta": {
-      "display": { "displayName": "Handwritten signature", "purpose": "The centred name below the animation." },
-      "body": { "displayName": "Page handwriting", "purpose": "Shared handwritten page voice from the supplied Patrick Hand asset." },
-      "fallback": { "displayName": "No-JavaScript message", "purpose": "The explanatory fallback below the animation canvas." }
-    },
-    "shadows": [],
-    "breakpoints": [{ "name": "mobile", "value": "600px" }],
-    "motion": [
-      { "name": "clubroot-playback", "value": "104s loop; up to 30fps", "purpose": "Silent supplied artwork playback, toggled by the canvas and native button." },
-      { "name": "reduced-motion", "value": "paused initially; outline boil disabled", "purpose": "Pause when the preference changes to reduce and permit explicit user playback." },
-      { "name": "activity-suspension", "value": "IntersectionObserver threshold 0; document visibility", "purpose": "Suspend offscreen or while hidden; resume only while playback remains selected." },
-      { "name": "animation-resize", "value": "150ms debounce", "purpose": "Resize at display density and redraw the current animation frame." },
-      { "name": "journal-texture", "value": "static; 140ms resize debounce", "purpose": "Decorative paper has no animation loop; text stays separate and selectable." },
-      { "name": "skip-scroll", "value": "smooth; auto under reduced motion", "purpose": "Move from Skip animation to the journal." }
-    ]
+    "shadows": [{"name":"banner-cutout","value":"0 4px 6px rgba(40,32,24,.28), 0 14px 26px -6px rgba(40,32,24,.35)","purpose":"Lift the panorama."}],
+    "motion": [{"name":"farm-playback","value":"up to 30fps","purpose":"Reduced motion pauses; hidden/offscreen suspends; explicit play remains available."}]
   },
-  "components": [
-    {
-      "name": "Playback button",
-      "kind": "button",
-      "refersTo": "playback",
-      "description": "Native keyboard control in its observed pause state; the live page switches icon and accessible label with playback state.",
-      "html": "<button class=\"ds-playback\" type=\"button\" aria-label=\"Pause animation\" title=\"Pause animation\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" aria-hidden=\"true\"><path d=\"M8 5v14M16 5v14\"/></svg></button>",
-      "css": ".ds-playback { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid #a5aac0; border-radius: 50%; background: var(--animation-paper, #f5f0e4); color: var(--animation-ink, #283d85); cursor: pointer; } .ds-playback:hover { background: #e7e6dd; } .ds-playback:focus-visible { outline: 2px solid var(--animation-ink, #283d85); outline-offset: 4px; }"
-    },
-    {
-      "name": "Skip animation link",
-      "kind": "nav",
-      "refersTo": "skip-link",
-      "description": "Focus-revealed anchor to the journal, preserving its position and keyboard treatment.",
-      "html": "<a class=\"ds-skip-link\" href=\"#journal\">Skip animation</a>",
-      "css": ".ds-skip-link { position: absolute; z-index: 5; top: -100px; left: 20px; padding: 12px 18px; color: var(--ink, #343b36); background: var(--paper, #eeefeb); font-family: var(--hand, 'Patrick Hand', 'Segoe Print', 'Bradley Hand', cursive); text-underline-offset: .2em; } .ds-skip-link:focus { top: 12px; outline: 2px solid var(--ink, #343b36); outline-offset: 3px; }"
-    },
-    {
-      "name": "Grey paper journal signature",
-      "kind": "custom",
-      "refersTo": "journal",
-      "description": "CSS paper fallback and current name-only signature. The live page adds static procedural texture through paper.js.",
-      "html": "<section class=\"ds-journal\" aria-labelledby=\"ds-name\"><div class=\"ds-journal-content\"><h1 id=\"ds-name\" class=\"ds-name\">Jamil Chowdhury</h1></div></section>",
-      "css": ".ds-journal { min-height: 38svh; padding: 52px 24px 88px; background: var(--paper, #eeefeb); color: var(--ink, #343b36); } .ds-journal-content { width: min(1040px, 100%); margin: 0 auto; } .ds-name { margin: 0; text-align: center; font: 400 clamp(2.7rem, 6vw, 4.5rem)/1.16 var(--hand, 'Patrick Hand', 'Segoe Print', 'Bradley Hand', cursive); letter-spacing: -.025em; text-wrap: balance; } @media (max-width: 600px) { .ds-journal { min-height: calc(100svh - 100vw * 9 / 16 - 80px); padding: 52px 22px 80px; } }"
-    }
-  ],
+  "components": [{
+    "name":"Farm playback",
+    "kind":"button",
+    "refersTo":"playback",
+    "description":"Below-banner pause state.",
+    "html":"<button class=\"ds-play\" aria-label=\"Pause farm animation\" type=\"button\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" aria-hidden=\"true\"><path d=\"M8 5v14M16 5v14\"/></svg></button>",
+    "css":".ds-play{display:grid;place-items:center;width:44px;height:44px;padding:0;border:1px solid #65645d;border-radius:50%;color:var(--ink,#221b16);background:#c8c9c4;cursor:pointer}.ds-play:hover{background:#d9dad4}.ds-play:focus-visible{outline:2px solid var(--ink,#221b16);outline-offset:4px}"
+  }],
   "narrative": {
-    "northStar": "A hand-drawn science journal",
-    "overview": "The supplied hand-drawn scientific artwork leads the experience. Its pencil marks, handwritten labels and warm sheet remain an intact visual asset. The surrounding interface stays quiet so the science remains the focus.\n\nThe neutral grey watercolour journal preserves the existing cotton-paper tooth, fibres and subtle pigment variation. Selectable HTML text sits above this static decorative texture. Warmth belongs to the supplied animation; the journal retains its neutral grey character.",
-    "keyCharacteristics": [
-      "Supplied scientific artwork with unobtrusive playback controls.",
-      "Patrick Hand lettering shared by the animation and page signature.",
-      "Neutral grey paper with static, procedural material detail.",
-      "Open spacing, flat surfaces and visible keyboard focus."
-    ],
-    "rules": [{ "name": "The Neutral Journal Rule", "body": "Preserve the journal's grey paper character; do not extend the supplied artwork's warm sheet into it.", "section": "colors" }],
-    "dos": [
-      "Do retain the supplied scientific artwork, labels and captions.",
-      "Do retain visible paper tooth and fibres on the neutral grey journal.",
-      "Do keep journal text selectable and separate from the decorative canvas.",
-      "Do preserve keyboard playback, visible focus, reduced-motion handling and offscreen suspension.",
-      "Do keep mobile playback below the artwork so scientific labels remain visible."
-    ],
-    "donts": [
-      "Don't introduce yellow washes, woodland scenery, trees or mushrooms into the grey journal.",
-      "Don't add biography, qualifications, employment claims or invented posts to the current name-only journal.",
-      "Don't turn the static journal paper texture into a motion effect."
-    ]
+    "northStar":"The Kind Little Farm",
+    "overview":"The supplied felt-and-ink farm leads above original textured grey wool. Preserve its artwork and labels.",
+    "dos":["Do preserve the supplied farm artwork and original grey felt.","Do keep playback below the artwork and keyboard accessible."],
+    "donts":["Don't add biography or invented posts to the current name-only content."]
   }
 }
-
