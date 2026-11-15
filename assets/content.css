@@ -1,10 +1,14 @@
 @font-face{font-family:'Bodoni Moda';src:url('bodoni-moda-latin.woff') format('woff');font-weight:500;font-style:normal;font-display:swap;}
 @font-face{font-family:'Patrick Hand';src:url('patrick-hand.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
 :root{--forest:#173e2c;--forest-muted:#28503d;--window-felt:#d6d4c8;--display:'Bodoni Moda',Georgia,serif;--lettering:'Patrick Hand','Caveat',cursive;}
-.identity{margin:0 auto 58px;text-align:center;}
-#sections h1{margin:0;color:var(--forest);font:500 clamp(2.5rem,5.6vw,5.4rem)/1.16 var(--display);letter-spacing:.015em;text-wrap:balance;}
-.identity-line{margin:17px auto 0;color:var(--forest);font:400 clamp(1.15rem,2vw,1.6rem)/1.5 var(--lettering);letter-spacing:.065em;text-wrap:balance;}
-.animation-gallery{display:grid;gap:56px;width:min(800px,100%);margin:0 auto;}
+/* name + subtitle, set into the open sky at the top-left of the farm banner */
+.hero-identity{position:absolute;z-index:2;left:2.4%;top:14%;max-width:44%;pointer-events:none;}
+.hero-identity h1{margin:0;text-align:left;color:var(--forest);font:500 clamp(1.3rem,2.05vw,3.2rem)/1.1 var(--display);letter-spacing:.015em;white-space:nowrap;
+  text-shadow:0 0 14px rgba(232,242,245,.9),0 0 4px rgba(232,242,245,.95);}
+.hero-identity .identity-line{margin:.5em 0 0;color:var(--forest);font:400 clamp(.8rem,.95vw,1.45rem)/1.35 var(--lettering);letter-spacing:.06em;
+  text-shadow:0 0 10px rgba(232,242,245,.95),0 0 3px rgba(232,242,245,.95);}
+/* animation windows: up to four per row on wide screens, centred */
+.animation-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,260px));justify-content:center;gap:44px 36px;width:min(1160px,100%);margin:0 auto;}
 .animation-entry{margin:0;min-width:0;}
 .animation-window{display:block;color:var(--forest);text-decoration:none;}
 .animation-window:focus-visible{outline:3px solid var(--forest);outline-offset:9px;border-radius:3px;}
@@ -17,6 +21,12 @@
 .frame-credit{position:relative;display:block;margin-top:9px;padding-right:3px;color:var(--forest);text-align:right;font:500 15px/1.4 var(--display);letter-spacing:.025em;}
 .animation-entry h2{margin:27px 0 7px;text-align:center;color:var(--forest);font:500 clamp(1.8rem,3.2vw,2.55rem)/1.25 var(--display);text-wrap:balance;}
 .animation-summary{margin:0;text-align:center;color:var(--forest-muted);font:400 clamp(1.15rem,2vw,1.45rem)/1.5 var(--lettering);}
+.animation-gallery .felt-frame{padding:10px 10px 6px;box-shadow:0 4px 11px rgba(36,31,22,.25);}
+.animation-gallery .felt-frame:before{inset:5px;}
+.animation-gallery .play-mark{width:50px;height:50px;}
+.animation-gallery .frame-credit{margin-top:5px;font-size:11px;}
+.animation-gallery h2{margin:15px 0 3px;font-size:clamp(1.2rem,1.45vw,1.4rem);line-height:1.25;}
+.animation-gallery .animation-summary{font-size:1.02rem;line-height:1.4;}
 .animation-window:hover h2{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.16em;}
 .video-page{margin:0;min-height:100svh;background:#bdbebb;color:var(--forest);font:18px/1.7 Georgia,serif;}
 .video-page *{box-sizing:border-box;}
@@ -32,14 +42,15 @@
 .video-meta{margin:8px 0 28px;text-align:center;color:var(--forest-muted);font:16px/1.5 var(--lettering);letter-spacing:.04em;}
 .video-frame video{display:block;width:100%;aspect-ratio:16/9;background:#1b211c;}
 .video-note{max-width:65ch;margin:29px auto 0;font-size:17px;line-height:1.75;}
-.video-download{display:block;width:fit-content;margin:16px auto 0;font:400 20px/1.5 var(--lettering);}
 @media(max-width:600px){
-  .identity{margin-bottom:40px;}
-  .identity-line{max-width:320px;margin-top:16px;}
+  .hero canvas{object-position:18% 100%;}   /* phones: a little more open sky beside the gardener */
+  .hero-identity{left:12px;top:10px;max-width:175px;}
+  .hero-identity h1{font-size:1.2rem;}
+  .hero-identity .identity-line{margin-top:.35em;font-size:.8rem;line-height:1.3;}
+  .animation-gallery{grid-template-columns:minmax(0,320px);}
   .felt-frame{padding:12px 12px 9px;}
   .felt-frame:before{inset:5px;}
   .play-mark{width:64px;height:64px;}
-  .animation-entry h2{margin-top:24px;}
   .frame-credit{font-size:13px;}
   .video-nav{width:calc(100% - 32px);padding:22px 0;gap:12px;}
   .video-content{width:calc(100% - 24px);margin-top:18px;}
