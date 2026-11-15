@@ -4,7 +4,7 @@
 
 GitHub Pages; static HTML, CSS and procedural Canvas 2D art. Publish the root of `main` at https://jamil-chowdhury.github.io/.
 
-A personal creative science website with an illustrated sustainable farm, grey felt texture, the headline `The unsung heroes of my farm`, a dark-green creator credit, and the subtitle `Research. Creative technologist. Artist.`
+A personal creative science website with an illustrated sustainable farm, grey felt texture, the headline `The unsung heroes of my farm`, a dark-green creator credit, and the subtitle `Researcher. Creative technologist. Artist.`
 
 ## Animation collection
 

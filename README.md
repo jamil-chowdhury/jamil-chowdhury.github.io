@@ -4,7 +4,7 @@ Website: https://jamil-chowdhury.github.io/
 
 GitHub Pages publishes the root of `main`.
 
-The landing page retains the illustrated farm panorama and grey felt background. The banner shows the headline `The unsung heroes of my farm` (Fraunces), then `Creator: Jamil Chowdhury` and the subtitle `Research. Creative technologist. Artist.` in smaller Kalam handwriting, all in dark green.
+The landing page retains the illustrated farm panorama and grey felt background. The banner shows the headline `The unsung heroes of my farm` (Fraunces), then `Creator: Jamil Chowdhury` and the subtitle `Researcher. Creative technologist. Artist.` in smaller Kalam handwriting, all in dark green.
 
 ## Editing and adding animations
 
