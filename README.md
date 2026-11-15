@@ -2,13 +2,13 @@
 
 Website: https://jamil-chowdhury.github.io/
 
+GitHub Pages publishes the root of the `main` branch.
+
 ## Editing
 
-- `index.html`: homepage text, navigation and links.
-- `style.css`: responsive layout, colours and typography.
-- `paper.js`: static greyish watercolour-paper texture drawn with JavaScript canvas at display density. Redraws on resize; no image download or animation loop. CSS provides a neutral fallback without JavaScript.
-- `assets/caveat-subset.ttf`: self-hosted Caveat font; see `assets/OFL-Caveat.txt` for its license.
+- `index.html`: homepage structure and name. Add future science posts inside `<div class="posts">` in the grey journal section.
+- `style.css`: responsive layout and typography. The embedded Patrick Hand font comes from the supplied HTML animation; its license is in `assets/OFL-Patrick-Hand.txt`.
+- `assets/clubroot.js`: the supplied clubroot animation adapted for a silent, looping landing-page feature. Captions and labels are drawn on the canvas. Search `const CAPS` to edit the caption wording.
+- `paper.js`: the existing static grey watercolour texture, drawn at display density.
 
-GitHub Pages publishes from the root of the `main` branch. The custom `index.html` is the website entry point; editing this README does not change the homepage.
-
-Text and links remain normal HTML, separate from the decorative canvas. Reference screenshots were used only for paper character, not their content or illustrations.
+The animation has a keyboard-accessible play/pause button. It starts paused when the visitor requests reduced motion and stops rendering while offscreen or in a hidden tab. The animation artwork is kept in its original 16:9 composition. The site makes no external font, script, audio or video requests.

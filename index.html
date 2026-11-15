@@ -4,37 +4,36 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eeefeb">
-  <meta name="description" content="Welcome to Jamil Chowdhury’s personal website.">
+  <meta name="description" content="Jamil Chowdhury’s personal website.">
   <title>Jamil Chowdhury</title>
   <link rel="canonical" href="https://jamil-chowdhury.github.io/">
-  <link rel="preload" href="assets/caveat-subset.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="icon" href="assets/favicon.svg?v=grey-paper" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=20261113-grey-paper">
+  <link rel="stylesheet" href="style.css?v=20261115-animation">
+  <script src="assets/clubroot.js?v=20261115-animation" defer></script>
   <script src="paper.js?v=20261113-grey-paper" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#welcome">Skip to content</a>
-  <div class="page">
-    <canvas class="paper-texture" aria-hidden="true"></canvas>
-    <header class="site-header">
-      <a class="signature" href="/" aria-label="Jamil Chowdhury, home">Jamil Chowdhury<span class="signature-line" aria-hidden="true"></span></a>
-      <nav aria-label="Main navigation">
-        <a class="current" href="#welcome" aria-current="page">Home</a>
-        <a href="https://github.com/jamil-chowdhury">GitHub <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
-      </nav>
-    </header>
-    <main id="welcome" tabindex="-1">
-      <div class="welcome">
-        <h1>Jamil Chowdhury</h1>
-        <p class="greeting">Welcome to my little corner of the web.</p>
-        <p class="intro">This website is taking shape.<br>More content will be added soon.</p>
-        <a class="profile-link" href="https://github.com/jamil-chowdhury">Explore my GitHub <svg width="21" height="16" viewBox="0 0 28 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 10h24m-7-7 7 7-7 7"/></svg></a>
+  <a class="skip-link" href="#journal">Skip animation</a>
+  <main>
+    <section class="animation" aria-label="Clubroot life cycle animation">
+      <div class="animation-frame">
+        <canvas id="cv" width="1280" height="720" role="img"
+          aria-label="Hand-drawn animation showing the clubroot disease cycle, from root infection to gall formation and the return of resting spores to soil."></canvas>
+        <button id="play" class="playback" type="button" aria-label="Pause animation" title="Pause animation" data-playing="true">
+          <svg class="pause-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>
+          <svg class="play-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg>
+        </button>
+        <noscript><p class="fallback">The clubroot animation needs JavaScript to play.</p></noscript>
       </div>
-    </main>
-    <footer>
-      <span>© Jamil Chowdhury</span>
-      <a href="https://github.com/jamil-chowdhury/jamil-chowdhury.github.io">View website source</a>
-    </footer>
-  </div>
+    </section>
+    <section id="journal" class="journal page" aria-labelledby="name">
+      <canvas class="paper-texture" aria-hidden="true"></canvas>
+      <div class="journal-content">
+        <h1 id="name">Jamil Chowdhury</h1>
+        <!-- Add future science blog posts and animations here. -->
+        <div class="posts"></div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

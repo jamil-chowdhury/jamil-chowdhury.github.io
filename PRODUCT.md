@@ -6,16 +6,16 @@
 web
 
 ## Stack
-GitHub Pages with static HTML/CSS and a small JavaScript canvas renderer for the paper texture.
+GitHub Pages with static HTML/CSS and JavaScript canvas animation and paper texture.
 
 ## Product Purpose
-Personal welcome page at https://jamil-chowdhury.github.io. Preserve existing welcome text and public GitHub profile link.
+Personal website at https://jamil-chowdhury.github.io with a scientific animation above a grey area reserved for future science blogs and animations.
 
 ## Capabilities and Constraints
-Publish to jamil-chowdhury/jamil-chowdhury.github.io. No biography, qualifications or employment claims are authorised. No video has been supplied for this task. Responsive, keyboard-accessible static page.
+Publish to jamil-chowdhury/jamil-chowdhury.github.io. Current page copy is the name Jamil Chowdhury only, in addition to text inside the supplied animation and accessible control labels. Do not invent blog posts, biography, qualifications or employment claims. Responsive layout and keyboard-accessible playback.
 
 ## Brand Commitments
-The latest user instruction replaces the yellow woodland design: greyish watercolour paper texture only, no trees or mushrooms, drawn with JavaScript to improve sharpness. Preserve existing content and navigation. The user has instructed us to proceed and publish.
+The user supplied clubroot.html and requested its animation at the top of the landing page. Preserve the supplied artwork and captions. Keep neutral grey watercolour paper below, ready for future posts, and show the name Jamil Chowdhury there now. The user requested publication to the existing GitHub Pages site.
 
 ## Evidence on Hand
-Homepage contains name, welcome, setup notice and GitHub profile link. Latest texture reference: upload/image(20261113-120102).png; use only its tactile paper character.
+Supplied clubroot.html: self-contained 104-second hand-drawn clubroot life cycle animation, embedded Patrick Hand font, and procedural drawing. Existing paper.js supplies the grey watercolour texture.
