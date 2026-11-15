@@ -1,6 +1,9 @@
 @font-face{font-family:'Bodoni Moda';src:url('bodoni-moda-latin.woff') format('woff');font-weight:500;font-style:normal;font-display:swap;}
 @font-face{font-family:'Patrick Hand';src:url('patrick-hand.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
-:root{--forest:#173e2c;--forest-muted:#28503d;--window-felt:#d6d4c8;--display:'Bodoni Moda',Georgia,serif;--lettering:'Patrick Hand','Caveat',cursive;}
+@font-face{font-family:'Fraunces';src:url('fraunces-latin-full.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap;}
+@font-face{font-family:'Kalam';src:url('kalam-latin-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+:root{--forest:#173e2c;--forest-muted:#28503d;--window-felt:#d6d4c8;--display:'Bodoni Moda',Georgia,serif;--lettering:'Patrick Hand','Caveat',cursive;
+  --botanical:'Fraunces',Georgia,serif;--field-notes:'Kalam','Patrick Hand',cursive;}
 /* name + subtitle, set into the open sky at the top-left of the farm banner */
 .hero-identity{position:absolute;z-index:2;left:2.4%;top:14%;max-width:44%;pointer-events:none;}
 .hero-identity h1{margin:0;text-align:left;color:var(--forest);font:500 clamp(1.3rem,2.05vw,3.2rem)/1.1 var(--display);letter-spacing:.015em;white-space:nowrap;
@@ -25,9 +28,26 @@
 .animation-gallery .felt-frame:before{inset:5px;}
 .animation-gallery .play-mark{width:50px;height:50px;}
 .animation-gallery .frame-credit{margin-top:5px;font-size:11px;}
-.animation-gallery h2{margin:15px 0 3px;font-size:clamp(1.2rem,1.45vw,1.4rem);line-height:1.25;}
-.animation-gallery .animation-summary{font-size:1.02rem;line-height:1.4;}
+.animation-gallery h2{margin:15px 0 4px;font-family:var(--botanical);font-weight:560;font-size:clamp(1.25rem,1.55vw,1.5rem);line-height:1.2;letter-spacing:-.005em;
+  font-variation-settings:'SOFT' 100,'WONK' 1,'opsz' 36;}
+.animation-gallery .animation-summary{font-family:var(--field-notes);font-size:1rem;line-height:1.45;}
 .animation-window:hover h2{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.16em;}
+/* masking tape holding each window to the felt board: semi-transparent, torn ends,
+   placed a little differently on each card (the pattern repeats every four cards) */
+.animation-gallery{padding-top:14px;overflow-x:clip;}
+.animation-window{position:relative;}
+.animation-window::before,.animation-window::after{content:'';position:absolute;z-index:3;height:23px;pointer-events:none;
+  background:linear-gradient(180deg,rgba(255,255,255,.24) 0,rgba(255,255,255,0) 38%,rgba(110,92,58,.12) 100%),
+    repeating-linear-gradient(94deg,rgba(255,255,255,.12) 0 1px,transparent 1px 4px,rgba(120,100,62,.07) 4px 5px,transparent 5px 9px),
+    rgba(236,226,194,.58);}
+.animation-window::before{top:var(--t1);left:var(--l1,auto);right:var(--r1,auto);width:var(--w1);transform:rotate(var(--a1));
+  clip-path:polygon(3px 0,calc(100% - 4px) 0,100% 22%,calc(100% - 3px) 41%,100% 63%,calc(100% - 5px) 82%,calc(100% - 2px) 100%,4px 100%,0 79%,4px 58%,1px 37%,5px 18%);}
+.animation-window::after{display:var(--d2,block);top:var(--t2);left:var(--l2,auto);right:var(--r2,auto);width:var(--w2);transform:rotate(var(--a2));
+  clip-path:polygon(0 0,calc(100% - 2px) 0,calc(100% - 6px) 17%,100% 34%,calc(100% - 4px) 52%,100% 71%,calc(100% - 5px) 100%,2px 100%,5px 84%,0 66%,3px 47%,0 29%,4px 12%);}
+.animation-entry:nth-child(4n+1){--l1:-30px;--t1:-3px;--w1:82px;--a1:-38deg;--r2:-24px;--t2:-1px;--w2:64px;--a2:43deg;}       /* both top corners */
+.animation-entry:nth-child(4n+2){--l1:calc(50% - 52px);--t1:-12px;--w1:112px;--a1:-3deg;--d2:none;}                           /* one strip across the top */
+.animation-entry:nth-child(4n+3){--l1:-34px;--t1:4px;--w1:96px;--a1:-47deg;--r2:18px;--t2:-12px;--w2:56px;--a2:6deg;}          /* long corner piece + short strip */
+.animation-entry:nth-child(4n){--l1:10%;--t1:-11px;--w1:70px;--a1:-7deg;--r2:9%;--t2:-13px;--w2:88px;--a2:4deg;}              /* two strips of different lengths */
 .video-page{margin:0;min-height:100svh;background:#bdbebb;color:var(--forest);font:18px/1.7 Georgia,serif;}
 .video-page *{box-sizing:border-box;}
 .video-page::selection{background:var(--forest);color:#f4f1e8;}
@@ -47,7 +67,9 @@
   .hero-identity{left:12px;top:10px;max-width:175px;}
   .hero-identity h1{font-size:1.2rem;}
   .hero-identity .identity-line{margin-top:.35em;font-size:.8rem;line-height:1.3;}
-  .animation-gallery{grid-template-columns:minmax(0,320px);}
+  .animation-gallery{grid-template-columns:minmax(0,320px);padding-top:34px;}
+  .animation-entry:nth-child(4n+1){--l1:-18px;--r2:-12px;--w2:58px;}   /* keep corner tape on screen */
+  .animation-entry:nth-child(4n+3){--l1:-20px;--w1:84px;}
   .felt-frame{padding:12px 12px 9px;}
   .felt-frame:before{inset:5px;}
   .play-mark{width:64px;height:64px;}
