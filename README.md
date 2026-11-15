@@ -12,6 +12,7 @@ The landing page retains the illustrated farm panorama and grey felt background.
 - `assets/content.css`: name, subtitle, animation-card and video-page styles. Font licenses are in `assets/OFL-Bodoni-Moda.txt` and `assets/OFL-Patrick-Hand.txt`.
 - Each `.animation-entry` card links to a separate page with `target="_blank" rel="noopener"`. The browser chooses a new tab or window. The gallery shows up to four windows per row on wide screens, centred. Duplicate an article in `.animation-gallery`, replace its thumbnail, title, summary and page link, and create the matching page.
 - `ectomycorrhiza.html`: video title, short description and video source. Its video starts only when a visitor presses play. The homepage never requests video bytes.
+- `clubroot.html`: the same layout for `When Roots Turn to Clubs`, the narrated clubroot animation. Its 1080p MP4 (`clubroot-1080p.mp4`) is an asset on the same `animations-v1` release, and its card uses `assets/clubroot-poster.webp`.
 - To change the narration, replace the audio track in the MP4, upload the new video as a GitHub release asset, and update the `<source src>` in the video page. Editing the page text alone does not change the recorded voice.
 - `assets/felt-background.js`: reusable generated grey felt. The homepage retains the same inline background script and its original farm illustration code.
 
