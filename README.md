@@ -13,6 +13,7 @@ The landing page retains the illustrated farm panorama and grey felt background.
 - Each `.animation-entry` card links to a separate page with `target="_blank" rel="noopener"`. The browser chooses a new tab or window. The gallery shows up to four windows per row on wide screens, centred. Duplicate an article in `.animation-gallery`, replace its thumbnail, title, summary and page link, and create the matching page.
 - `ectomycorrhiza.html`: video title, short description and video source. Its video starts only when a visitor presses play. The homepage never requests video bytes.
 - `clubroot.html`: the same layout for `When Roots Turn to Clubs`, the narrated clubroot animation. Its 1080p MP4 is stored in the repository at `assets/video/clubroot-1080p.mp4` (about 83 MB; GitHub's per-file limit is 100 MB), and its card uses `assets/clubroot-poster.webp`. It can be moved to the `animations-v1` release later by uploading it there and changing the `<source src>`.
+- `bacillus.html`: the same layout for `Bodyguards Below Ground`, the narrated Bacillus sequel. Its 1080p MP4 is at `assets/video/bacillus-1080p.mp4` and its card uses `assets/bacillus-poster.webp`.
 - To change the narration, replace the audio track in the MP4, upload the new video as a GitHub release asset, and update the `<source src>` in the video page. Editing the page text alone does not change the recorded voice.
 - `assets/felt-background.js`: reusable generated grey felt. The homepage retains the same inline background script and its original farm illustration code.
 
