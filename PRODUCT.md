@@ -1,21 +1,17 @@
 # Jamil Chowdhury personal website
 
-<!-- impeccable:product-schema 1 -->
+## Platform and purpose
 
-## Platform
-web
+GitHub Pages; static HTML, CSS and procedural Canvas 2D art. Publish the root of `main` at https://jamil-chowdhury.github.io/.
 
-## Stack
-GitHub Pages; static HTML, CSS and procedural Canvas 2D art in index.html.
+A personal creative science website with an illustrated sustainable farm, grey felt texture, dark-green name, and the subtitle `Research. Creative technologist. Artist.`
 
-## Product Purpose
-A personal website with the supplied sustainable farming panorama above a grey felt area for future science blogs and animations.
+## Animation collection
 
-## Capabilities and Constraints
-Publish to jamil-chowdhury/jamil-chowdhury.github.io. Current added page text is only Jamil Chowdhury. Retain scientific labels within the supplied artwork and accessible playback labels. Do not invent posts, biography or employment claims.
+Visitors select framed animation cards on the landing page. Each opens its own content page in a new tab or window, leaving the landing page available. Add future animations with the same pattern.
 
-## Brand Commitments
-The user's latest correction explicitly selects the farming landing page and attached farm reference, rather than the clubroot animation. Use the latest supplied landing page(1).html. Preserve its 3:1 felt-and-ink farm scene and original generated grey wool/felt background. Show the name below the banner. Keep the future posts area empty.
+`A Partnership Takes Root` explains what ectomycorrhiza is and how it forms. Its page is `ectomycorrhiza.html`; its narrated 1080p MP4 is a GitHub release asset. No video bytes are requested by the homepage. The separate player loads on demand and has native playback controls, a poster, a download link and navigation back to the farm.
 
-## Evidence on Hand
-Latest supplied landing page(1).html and screenshot of the farm panorama: gardener and child, turbines, solar shed, compost, rain barrel, apple tree, hive, hens, sunflowers, roots and fungal nutrient exchange. Desktop and mobile browser checks show the corrected farming scene, name below, and working pause/play control.
+## Brand and constraints
+
+Retain the supplied felt-and-ink farm panorama, its labels and original generated grey felt. Preserve accessible pause/play, reduced-motion and offscreen behavior. Keep fonts self-hosted and their licenses bundled. Do not invent biography, posts or employment claims.
