@@ -1,0 +1,48 @@
+@font-face{font-family:'Bodoni Moda';src:url('bodoni-moda-latin.woff') format('woff');font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:'Patrick Hand';src:url('patrick-hand.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+:root{--forest:#173e2c;--forest-muted:#28503d;--window-felt:#d6d4c8;--display:'Bodoni Moda',Georgia,serif;--lettering:'Patrick Hand','Caveat',cursive;}
+.identity{margin:0 auto 58px;text-align:center;}
+#sections h1{margin:0;color:var(--forest);font:500 clamp(2.5rem,5.6vw,5.4rem)/1.16 var(--display);letter-spacing:.015em;text-wrap:balance;}
+.identity-line{margin:17px auto 0;color:var(--forest);font:400 clamp(1.15rem,2vw,1.6rem)/1.5 var(--lettering);letter-spacing:.065em;text-wrap:balance;}
+.animation-gallery{display:grid;gap:56px;width:min(800px,100%);margin:0 auto;}
+.animation-entry{margin:0;min-width:0;}
+.animation-window{display:block;color:var(--forest);text-decoration:none;}
+.animation-window:focus-visible{outline:3px solid var(--forest);outline-offset:9px;border-radius:3px;}
+.felt-frame{position:relative;padding:18px 18px 11px;background-color:var(--window-felt);background-image:var(--felt-wool,none);background-size:384px 384px;box-shadow:0 6px 16px rgba(36,31,22,.25);}
+.felt-frame:before{content:'';position:absolute;inset:8px;pointer-events:none;border:1px dashed rgba(248,245,233,.85);}
+.window-opening{position:relative;overflow:hidden;background:#a48362;}
+.window-opening:after{content:'';position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 3px 10px rgba(35,30,22,.35);}
+.window-opening img{display:block;width:100%;height:auto;aspect-ratio:16/9;}
+.play-mark{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);opacity:.5;filter:drop-shadow(0 2px 3px rgba(25,30,20,.3));}
+.frame-credit{position:relative;display:block;margin-top:9px;padding-right:3px;color:var(--forest);text-align:right;font:500 15px/1.4 var(--display);letter-spacing:.025em;}
+.animation-entry h2{margin:27px 0 7px;text-align:center;color:var(--forest);font:500 clamp(1.8rem,3.2vw,2.55rem)/1.25 var(--display);text-wrap:balance;}
+.animation-summary{margin:0;text-align:center;color:var(--forest-muted);font:400 clamp(1.15rem,2vw,1.45rem)/1.5 var(--lettering);}
+.animation-window:hover h2{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.16em;}
+.video-page{margin:0;min-height:100svh;background:#bdbebb;color:var(--forest);font:18px/1.7 Georgia,serif;}
+.video-page *{box-sizing:border-box;}
+.video-page::selection{background:var(--forest);color:#f4f1e8;}
+.video-page a{color:var(--forest);text-underline-offset:.22em;}
+.video-page a:focus-visible{outline:2px solid var(--forest);outline-offset:5px;}
+.video-nav{display:flex;align-items:center;justify-content:space-between;gap:24px;width:min(1120px,calc(100% - 48px));margin:0 auto;padding:28px 0 26px;}
+.video-signature{font:500 clamp(1.2rem,2.5vw,1.8rem)/1.3 var(--display);text-decoration:none;}
+.back-link{display:inline-flex;align-items:center;gap:8px;font:400 20px/1.3 var(--lettering);text-decoration:none;white-space:nowrap;}
+.video-content{width:min(1120px,calc(100% - 48px));margin:14px auto 0;padding-bottom:64px;}
+.video-content h1{margin:0 auto;text-align:center;font:500 clamp(2rem,4.7vw,3.7rem)/1.2 var(--display);letter-spacing:-.02em;text-wrap:balance;}
+.video-dek{margin:13px 0 0;text-align:center;font:400 clamp(1.25rem,2.4vw,1.65rem)/1.5 var(--lettering);}
+.video-meta{margin:8px 0 28px;text-align:center;color:var(--forest-muted);font:16px/1.5 var(--lettering);letter-spacing:.04em;}
+.video-frame video{display:block;width:100%;aspect-ratio:16/9;background:#1b211c;}
+.video-note{max-width:65ch;margin:29px auto 0;font-size:17px;line-height:1.75;}
+.video-download{display:block;width:fit-content;margin:16px auto 0;font:400 20px/1.5 var(--lettering);}
+@media(max-width:600px){
+  .identity{margin-bottom:40px;}
+  .identity-line{max-width:320px;margin-top:16px;}
+  .felt-frame{padding:12px 12px 9px;}
+  .felt-frame:before{inset:5px;}
+  .play-mark{width:64px;height:64px;}
+  .animation-entry h2{margin-top:24px;}
+  .frame-credit{font-size:13px;}
+  .video-nav{width:calc(100% - 32px);padding:22px 0;gap:12px;}
+  .video-content{width:calc(100% - 24px);margin-top:18px;}
+  .back-link{font-size:17px;gap:5px;}
+  .video-note{padding:0 8px;font-size:16px;}
+}

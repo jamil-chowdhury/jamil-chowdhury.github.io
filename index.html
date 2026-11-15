@@ -7,6 +7,7 @@
 <link rel="canonical" href="https://jamil-chowdhury.github.io/">
 <link rel="icon" href="assets/favicon.svg?v=farm" type="image/svg+xml">
 <link rel="preload" href="assets/caveat-subset.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="assets/bodoni-moda-latin.woff" as="font" type="font/woff" crossorigin>
 <meta name="description" content="Hand-made science animations about plants, soil, fungi and sustainable farming.">
 <style>
   @font-face{font-family:'Caveat';src:url('assets/caveat-subset.ttf') format('truetype');font-weight:400 700;font-style:normal;font-display:swap;}
@@ -47,6 +48,7 @@
   html{scrollbar-color:#767871 #bdbebb;}
   @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
 </style>
+<link rel="stylesheet" href="assets/content.css?v=20261115-windows">
 </head>
 <body>
 <a class="skip-link" href="#sections">Skip animation</a>
@@ -64,16 +66,11 @@
 </div>
 
 <main id="sections" aria-labelledby="name">
-  <h1 id="name">Jamil Chowdhury</h1>
-  <!--
-    Add each new animation as its own section, for example:
-
-    <section class="anim-section" id="ectomycorrhiza">
-      <h2>How ectomycorrhiza forms</h2>
-      <p>Short intro…</p>
-      ... your animation (video, canvas or iframe) ...
-    </section>
-  -->
+  <div class="identity">
+    <h1 id="name">Jamil Chowdhury</h1>
+    <p class="identity-line">Research. Creative technologist. Artist.</p>
+  </div>
+  <!-- Add animation cards after their media files have been published. -->
 </main>
 
 <script>
@@ -1082,6 +1079,7 @@ start();
       tiled(x,y,rad,(X,Y)=>{const gr=g.createRadialGradient(X,Y,0,X,Y,rad);gr.addColorStop(0,dark?`rgba(70,72,70,${al})`:`rgba(255,255,255,${al*1.2})`);gr.addColorStop(1,'rgba(0,0,0,0)');g.fillStyle=gr;g.fillRect(X-rad,Y-rad,rad*2,rad*2);});}
   });
   const b=document.body.style;
+  b.setProperty('--felt-wool',`url(${wool})`);
   b.backgroundImage=`url(${wool}), url(${clouds})`;
   b.backgroundSize='384px 384px, 910px 910px';
   b.backgroundRepeat='repeat, repeat';
